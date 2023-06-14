@@ -1,0 +1,19 @@
+class changePwdClass(object):
+    """docstring for changePwdClass"""
+    def __init__(self, pwdNew, pwdOld):
+        self.pwdNew = pwdNew        
+        self.pwdOld = pwdOld
+
+    def changeUserPwd(self):
+        waitandClick('//*[@id="Con"]/div[1]/ul[2]/li[1]')
+        waitandClick('//*[@id="Con"]/div[1]/ul[2]/li[1]/ul/li[3]')
+        waitforDisplay('//*[@id="_Widget"]')
+        waitandSendkeys('//*[@id="PwdOld"]', self.pwdOld)
+        waitandSendkeys('//*[@id="PwdNew"]', self.pwdNew)
+        waitandSendkeys('//*[@id="PwdCfm"]', self.pwdNew)
+        waitandClick('//*[@id="SavePwd"]') 
+    """登录文档字符串"""
+    def __init__(self, arg):
+        self.login_pwd = arg//登录
+    def login(self):
+        waitandSendkeys('//*[@id="Pwd"]', self.log
